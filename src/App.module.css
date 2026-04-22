@@ -1,0 +1,38 @@
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* Hero */
+.hero { max-width: 1440px; margin: 0 auto; padding: 48px 24px 32px; width: 100%; }
+.heroTag { font-family: var(--mono); font-size: 10px; color: var(--btc); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; }
+.heroTitle {
+  font-size: clamp(28px, 4vw, 52px); font-weight: 800; line-height: 1.05;
+  max-width: 640px; margin-bottom: 12px;
+}
+.heroTitle em { font-style: normal; color: var(--btc); }
+.heroTitle span { color: var(--btc); }
+.heroSub { color: var(--tx3); font-size: 14px; max-width: 480px; line-height: 1.65; margin-bottom: 8px; }
+.heroAuthor { font-family: var(--mono); font-size: 11px; color: var(--tx2); }
+.heroAuthor strong { color: var(--btc); }
+
+/* Main layout */
+.main {
+  max-width: 1440px; margin: 0 auto; padding: 0 24px 60px;
+  display: grid; grid-template-columns: 340px 1fr; gap: 20px;
+  align-items: start; width: 100%; flex: 1;
+}
+@media(max-width: 1024px) { .main { grid-template-columns: 1fr; } }
+
+.sidebar { position: sticky; top: 60px; }
+@media(max-width: 1024px) { .sidebar { position: static; } }
+
+.content { min-width: 0; }
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--bd);
+  padding: 16px 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--mono); font-size: 9px; color: var(--tx3);
+  flex-wrap: wrap; gap: 8px;
+  max-width: 1440px; margin: 0 auto; width: 100%;
+}
+.footer strong { color: var(--btc); }

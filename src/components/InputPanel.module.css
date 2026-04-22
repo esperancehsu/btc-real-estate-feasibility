@@ -1,0 +1,57 @@
+.panel { display: flex; flex-direction: column; gap: 8px; }
+
+.accordion {
+  background: var(--s1);
+  border: 1px solid var(--bd);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+
+.accordionHeader {
+  width: 100%;
+  padding: 11px 14px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: transparent; border: none; cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s;
+}
+.accordionHeader:hover { border-bottom-color: var(--bd); }
+
+.accordionTitle {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--btc);
+}
+
+.chevron { color: var(--tx3); transition: transform .25s; }
+.chevronOpen { color: var(--tx3); transform: rotate(180deg); transition: transform .25s; }
+
+.accordionBody {
+  padding: 12px 14px;
+  border-top: 1px solid var(--bd);
+  animation: slideDown .2s ease;
+}
+@keyframes slideDown { from{opacity:0;transform:translateY(-4px)} to{opacity:1;transform:translateY(0)} }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+.field { display: flex; flex-direction: column; gap: 4px; }
+.full { grid-column: 1 / -1; }
+
+.label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--tx3);
+  display: flex; align-items: center; gap: 4px;
+}
+.tip { color: var(--tx3); cursor: help; display: flex; }
+
+.input, .select {
+  background: var(--s2); border: 1px solid var(--bd);
+  color: var(--tx); padding: 7px 9px;
+  font-family: var(--mono); font-size: 11px;
+  border-radius: var(--r); outline: none; width: 100%;
+  transition: border-color .2s;
+}
+.input:focus, .select:focus { border-color: var(--btc); }
+.readonly { color: var(--btc); cursor: default; }
+.select option { background: var(--s2); }

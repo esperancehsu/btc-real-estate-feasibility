@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Syne:wght@400;700;800&display=swap');
+
+:root {
+  --btc: #F7931A; --btc-dim: #c97210;
+  --bg: #070707; --s1: #0f0f0f; --s2: #161616; --s3: #1e1e1e; --s4: #262626;
+  --bd: #2c2c2c; --bd2: #383838;
+  --tx: #ebebeb; --tx2: #a0a0a0; --tx3: #5a5a5a;
+  --green: #00d48a; --red: #ff4040; --orange: #ff8f00; --blue: #3d9be9;
+  --mono: 'DM Mono', monospace;
+  --display: 'Syne', sans-serif;
+  --r: 6px; --rl: 12px;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--tx); font-family:var(--display);
+  -webkit-font-smoothing:antialiased; min-height:100vh; overflow-x:hidden;
+}
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:var(--bd2); border-radius:2px; }
